@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JSONP 实例</title>
+</head>
+<body>
+    <div id="divCustomers"></div>
+    <script type="text/javascript">
+function callbackFunction(data, methodName){
+	var div1 = document.getElementById('divCustomers');
+	console.log(data[0])
+	div1.innerHTML=data;
+        }
+</script>
+<script type="text/javascript" src="http://www.runoob.com/try/ajax/jsonp.php?jsoncallback=callbackFunction"></script>
+</body>
+</html>
